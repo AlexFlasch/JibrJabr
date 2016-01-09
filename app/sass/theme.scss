@@ -1,0 +1,35 @@
+// compileExpanded: ../styles/$1.$2.css
+
+@import "palette";
+
+body {
+    background-color: $lightBg;
+    color: $darkBg;
+}
+
+.btn {
+    border-radius: 0;
+    border: none;
+
+    color: $lightBg;
+
+    &.btn-primary {
+        background-color: $tone1;
+
+        transition-duration: .33s;
+        transition-property: all;
+
+        &:hover {
+            background-color: 
+        }
+    }
+
+    &.btn-default {
+        background-color: $tone2;
+    }
+}
+
+input.form-control {
+    border: none;
+    border-radius: 0;
+}

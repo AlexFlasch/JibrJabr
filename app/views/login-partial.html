@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../styles/login.scss.css">
+<div ng-controller="loginCtrl as login" class="jumbotron">
+    <h2>Welcome to JibrJabr!</h2>
+    <p>Please log in</p>
+    <form>
+        <input class="form-control" type="text" placeholder="Username">
+        <input class="form-control" type="password" placeholder="Password">
+
+        <button class="btn btn-primary btn-block" ng-click="login.signIn">Sign in</button>
+        <button class="btn btn-default btn-block" ng-click="login.register">Register</button>
+    </form>
+</div>

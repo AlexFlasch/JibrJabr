@@ -1,0 +1,25 @@
+// compileExpanded: ../styles/$1.$2.css
+
+@import "palette";
+
+body {
+    background-color: $lightBg;
+    color: $darkBg;
+}
+
+.jumbotron {
+    width: 50%;
+    height: 50%;
+
+    margin: auto;
+    margin-top: 25%;
+
+    padding: 25px;
+
+    background-color: $tone3;
+    color: $lightBg;
+}
+
+form > * {
+    margin: 5px;
+}

@@ -1,0 +1,18 @@
+body {
+  background-color: #eef0f2;
+  color: #454951;
+}
+
+.jumbotron {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  margin-top: 25%;
+  padding: 25px;
+  background-color: #73956f;
+  color: #eef0f2;
+}
+
+form > * {
+  margin: 5px;
+}

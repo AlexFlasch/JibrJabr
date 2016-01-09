@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JibrJabr</title>
+
+    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../styles/theme.scss.css">
+    <link rel="stylesheet" href="../styles/index.scss.css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <!-- my files -->
+    <script src="../scripts/jibrjabr.js"></script>
+    <script src="../scripts/dbServices.js"></script>
+    <script src="../scripts/loginController.js"></script>
+</head>
+<body ng-app="jibrjabr">
+    <main ng-controller="mainCtrl as main">
+        <div ui-view></div>
+    </main>
+</body>
+</html>
