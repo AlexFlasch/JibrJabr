@@ -4,10 +4,6 @@
     var app = require('app');
     var BrowserWindow = require('browser-window');
 
-    // remote objects
-    var db = require('./db').db;
-    var User = require('./db').UserSchema;
-
     var mainWindow = null;
 
     app.on('ready', function() {

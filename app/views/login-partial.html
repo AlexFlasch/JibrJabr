@@ -3,10 +3,10 @@
     <h2>Welcome to JibrJabr!</h2>
     <p>Please log in</p>
     <form>
-        <input class="form-control" type="text" placeholder="Username">
-        <input class="form-control" type="password" placeholder="Password">
+        <input class="form-control" type="text" placeholder="Username" ng-model="login.username">
+        <input class="form-control" type="password" placeholder="Password" ng-model="login.password">
 
-        <button class="btn btn-primary btn-block" ng-click="login.signIn">Sign in</button>
-        <button class="btn btn-default btn-block" ng-click="login.register">Register</button>
+        <button class="btn btn-primary btn-block" ng-click="login.loginUser(login.username, login.password)">Sign in</button>
+        <button class="btn btn-default btn-block" ng-click="login.registerUser(login.username, login.password)">Register</button>
     </form>
 </div>
