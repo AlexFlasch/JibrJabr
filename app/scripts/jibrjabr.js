@@ -10,7 +10,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('chat', {
             url: '/chat',
-            templateUrl: 'chat-partial.html'
+            views: {
+                "rooms": { template: "room-partial.html" },
+                "chat": { template: "chat-partial.html" }
+            }
         });
 
 });

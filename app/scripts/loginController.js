@@ -26,7 +26,7 @@ app.controller('loginCtrl', ['loginUser', 'registerUser', '$state', function(log
 
 app.service('loginUser', ['socket', function(socket) {
     return function(email, password, callback) {
-        socket.emit('login', {
+        socket.emit('user:login', {
             email: email,
             password: password,
             sessionID: window.sessionID
@@ -38,7 +38,7 @@ app.service('loginUser', ['socket', function(socket) {
 
 app.service('registerUser', ['socket', function(socket) {
     return function(email, password, callback) {
-        socket.emit('register', {
+        socket.emit('user:register', {
             email: email,
             password: password,
             sessionID: window.sessionID
