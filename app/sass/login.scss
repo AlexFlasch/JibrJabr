@@ -7,17 +7,100 @@ body {
     color: $darkBg;
 }
 
+input.form-control {
+    background-color: transparentize(white, 0.6);
+}
+
+.btn.btn-primary,
+.btn.btn-default {
+    display: inline;
+
+    width: 100%;
+
+    background-color: transparent;
+    color: $lightBg;
+
+    border-width: 3px;
+    border-color: $lightBg;
+    border-style: solid;
+
+    transition-property: all;
+    transition-duration: .33s;
+
+    &:hover {
+        background-color: transparentize($lightBg, 0.4);
+        color: $lightBg;
+
+        transition-property: all;
+        transition-duration: .33s;
+    }
+
+    &:focus {
+        background-color: $orange;
+        border-width: 3px;
+        border-color: $lightBg;
+        border-style: solid;
+    }
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url('../img/login-splash.jpeg') center center no-repeat;
+    background-size: cover;
+
+    z-index: -1;
+
+    &:before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background-image: linear-gradient(45deg, #67809F 0%, #F2784B 100%);
+
+        opacity: 0.4;
+    }
+}
+
 .jumbotron {
-    width: 50%;
-    height: 50%;
+    position: relative;
+
+    width: 50vw;
+    height: 60vh;
 
     margin: auto;
-    margin-top: 25%;
+    margin-top: 20vh;
 
     padding: 25px;
 
-    background-color: $tone3;
+    background-color: transparentize($darkBg, 0.6);
+    background-size: cover;
+
     color: $lightBg;
+
+    p.has-error.ng-hide {
+        visibility: hidden;
+    }
+    p.has-error {
+        visibility: visible;
+    }
+
+    .container-fluid {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+
+        width: 100%;
+    }
 }
 
 form > * {

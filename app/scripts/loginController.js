@@ -4,23 +4,28 @@ app.controller('loginCtrl', ['loginUser', 'registerUser', '$state', function(log
     var login = this;
 
     login.email = '';
+    login.emailValid = true;
     login.password = '';
+    login.passwordValid = true;
 
-    login.loginUser = function(username, password) {
-        loginUser(username, password, function(data) {
-            if(data.success) {
-                $state.go('chat');
-            }
-        });
-
+    login.loginUser = function(email, password, valid) {
+        // if(valid) {
+            loginUser(email, password, function(data) {
+                if(data.success) {
+                    $state.go('chat');
+                }
+            });
+        // }
     };
 
-    login.registerUser = function(username, password) {
-        registerUser(username, password, function(data) {
-            if(data.success) {
-                $state.go('chat');
-            }
-        });
+    login.registerUser = function(email, password, valid) {
+        // if(valid) {
+            registerUser(email, password, function(data) {
+                if(data.success) {
+                    $state.go('chat');
+                }
+            });
+        // }
     };
 }]);
 
@@ -32,7 +37,9 @@ app.service('loginUser', ['socket', function(socket) {
             sessionID: window.sessionID
         });
 
-        socket.on('user:loggedin', callback);
+        socket.on('user:loggedin', function(data) {
+            callback(data);
+        });
     };
 }]);
 
@@ -44,6 +51,8 @@ app.service('registerUser', ['socket', function(socket) {
             sessionID: window.sessionID
         });
 
-        socket.on('user:registered', callback);
+        socket.on('user:registered', function(data) {
+            callback(data);
+        });
     };
 }]);

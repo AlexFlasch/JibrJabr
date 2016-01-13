@@ -1,0 +1,14 @@
+// compileExpanded: ../styles/$1.$2.css
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    max-width: 300px;
+
+    .sidebar-btns {
+        list-style: none;
+
+    }
+}

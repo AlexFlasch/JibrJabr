@@ -2,6 +2,22 @@
 
 @import "palette";
 
+* {
+    outline: 0 !important;
+}
+
+.x-small {
+    font-size: 0.65em !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+p.has-error {
+    color: $errorText;
+}
+
 body {
     background-color: $lightBg;
     color: $darkBg;
@@ -14,22 +30,28 @@ body {
     color: $lightBg;
 
     &.btn-primary {
-        background-color: $tone1;
+        background-color: $orange;
 
         transition-duration: .33s;
         transition-property: all;
-
-        &:hover {
-            background-color: 
-        }
     }
 
     &.btn-default {
-        background-color: $tone2;
+        background-color: $paleBlue;
     }
 }
 
-input.form-control {
+.form-control {
     border: none;
     border-radius: 0;
+
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: $lightBg;
+
+    &:focus {
+        // box-shadow: 0px 0px 12px -1px rgba(242,120,75,1);
+        box-shadow: none;
+        border-bottom-color: rgba(242, 120, 75, 1);
+    }
 }

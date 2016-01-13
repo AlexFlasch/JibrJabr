@@ -1,23 +1,49 @@
+* {
+  outline: 0 !important;
+}
+
+.x-small {
+  font-size: 0.65em !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+p.has-error {
+  color: #ef4836;
+}
+
 body {
-  background-color: #eef0f2;
+  background-color: #f7f7f7;
   color: #454951;
 }
 
 .btn {
   border-radius: 0;
   border: none;
-  color: #eef0f2;
+  color: #f7f7f7;
 }
 
 .btn.btn-primary {
-  background-color: #95d7ae;
+  background-color: #f2784b;
+  transition-duration: .33s;
+  transition-property: all;
 }
 
 .btn.btn-default {
-  background-color: #7bae7f;
+  background-color: #34495e;
 }
 
-input.form-control {
+.form-control {
   border: none;
   border-radius: 0;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #f7f7f7;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-bottom-color: #f2784b;
 }

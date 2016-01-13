@@ -1,0 +1,10 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+}
+
+.sidebar .sidebar-btns {
+  list-style: none;
+}

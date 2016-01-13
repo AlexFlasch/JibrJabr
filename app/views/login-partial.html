@@ -2,11 +2,27 @@
 <div ng-controller="loginCtrl as login" class="jumbotron">
     <h2>Welcome to JibrJabr!</h2>
     <p>Please log in</p>
-    <form>
-        <input class="form-control" type="text" placeholder="Username" ng-model="login.username">
-        <input class="form-control" type="password" placeholder="Password" ng-model="login.password">
-
-        <button class="btn btn-primary btn-block" ng-click="login.loginUser(login.username, login.password)">Sign in</button>
-        <button class="btn btn-default btn-block" ng-click="login.registerUser(login.username, login.password)">Register</button>
+    <form name="registrationForm" novalidate>
+        <label for="email">Email</label>
+        <input class="form-control" type="email" ng-model="login.email" name="email" required>
+        <label for="password">Password</label>
+        <input class="form-control" type="password" ng-model="login.password" name="password" required>
     </form>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <button class="btn btn-primary" ng-click="login.loginUser(login.email, login.password, registrationFrom.$valid)">
+                    <i class="mdi mdi-login"></i>
+                    Sign in
+                </button>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <button class="btn btn-default" ng-click="login.registerUser(login.email, login.password, registrationForm.$valid)">
+                    <i class="mdi mdi-account-plus"></i>
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+<figure class="bg-image"></figure>

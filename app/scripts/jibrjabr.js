@@ -10,10 +10,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('chat', {
             url: '/chat',
-            views: {
-                "rooms": { template: "room-partial.html" },
-                "chat": { template: "chat-partial.html" }
-            }
+            templateUrl: 'chat-partial.html'
         });
 
 });
@@ -21,7 +18,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 app.controller('mainCtrl', [function($ui, $router) {
     var main = this;
 
-    main.test = "Hello, World!";
+    main.test = 'Hello, World!';
 }]);
 
 app.factory('socket', function ($rootScope) {
