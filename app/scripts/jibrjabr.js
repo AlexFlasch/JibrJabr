@@ -22,7 +22,7 @@ app.controller('mainCtrl', [function($ui, $router) {
 }]);
 
 app.factory('socket', function ($rootScope) {
-    var socket = io.connect('http://localhost:3000/');
+    var socket = io.connect('http://localhost:3000/', { secure: true });
 
     socket.on('conn:success', function(data) {
         window.sessionID = data;

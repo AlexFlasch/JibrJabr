@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../styles/chat.scss.css">
 <div class="sidebar container-fluid">
-    <div class="row">
-        <ul class="sidebar-btns">
+    <div class="row no-gutter">
+        <ul class="sidebar-btns inline-list">
             <li class="col-md-6 col-xs-6">
                 <button class="btn btn-default">
                     <i class="mdi mdi-chevron-right"></i>
@@ -20,3 +20,32 @@
 
     </ul>
 </div>
+<section id="chat-container">
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="btn btn-default">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                    <div class="navbar-brand">
+                        JibrJabr
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="chat-area">
+
+        </div>
+        <div id="msg-box-container" class="container-fluid no-gutter">
+            <div class="row no-gutter">
+                <div class="col-md-10 col-xs-10">
+                    <textarea id="msg-box"></textarea>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <button class="btn btn-default"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

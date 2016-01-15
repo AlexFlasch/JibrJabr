@@ -43,34 +43,6 @@ input.form-control {
     }
 }
 
-.bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    background: url('../img/login-splash.jpeg') center center no-repeat;
-    background-size: cover;
-
-    z-index: -1;
-
-    &:before {
-        content: '';
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-
-        background-image: linear-gradient(45deg, #67809F 0%, #F2784B 100%);
-
-        opacity: 0.4;
-    }
-}
-
 .jumbotron {
     position: relative;
 
