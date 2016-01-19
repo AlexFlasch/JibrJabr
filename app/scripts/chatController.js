@@ -3,6 +3,9 @@ var app = angular.module('jibrjabr');
 app.controller('chatCtrl', [function() {
     var chat = this;
 
+    chat.createRoomContent = 'create-room-popover.html';
+    chat.createRoomName = '';
+
     chat.rooms = [];
 
     var msg = '';

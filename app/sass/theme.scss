@@ -6,6 +6,13 @@
     outline: 0 !important;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
 .x-small {
     font-size: 0.65em !important;
 }
@@ -27,6 +34,8 @@ p.has-error {
 .container-fluid.no-gutter {
     padding-left: 0;
     padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .row.no-gutter [class*='col-']:not(:first-child),

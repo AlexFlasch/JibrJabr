@@ -7,7 +7,7 @@
     top: 0;
     left: 300px;
 
-    width: 100%;
+    width: calc(100% - 300px);
     height: 100vh;
 
     & > div {
@@ -19,29 +19,83 @@
 }
 
 #chat-area {
+    display: flex;
+    flex-direction: column;
+
     height: 100%;
+    width: 100%;
 
     background-color: transparentize($lightBg, 0.4);
 
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: transparentize($lightBg, 0.2);
+    #msg-container {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+#msg-area {
+    height: 100%;
 }
 
 #msg-box-container {
-    position: absolute;
-    bottom: 0;
-
     width: 100%;
+    margin-bottom: 30px;
 
-    textarea {
-        background-color: transparentize($darkBg, 0.6);
-        color: $lightBg;
+    & > div > div.col-md-2.col-xs-2 {
+        height: 45px;
 
-        border-top-width: 1px;
-        border-top-style: solid;
-        border-top-color: transparentize($darkBg, 0.4);
+        .row {
+            height: 100%;
+
+            & > div {
+                height: 100%;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+
+            float: none;
+
+            margin: 0;
+            padding: 0;
+
+            background-color: transparentize($darkBg, 0.6);
+            border: none;
+
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-left-color: $lightBg;
+
+            color: $lightBg;
+
+            transition-property: all;
+            transition-duration: .33s;
+
+            & > i {
+                font-size: 1.5em;
+            }
+
+            &:hover {
+                color: $orange;
+            }
+        }
     }
+}
+
+#msg-box {
+    width: 100%;
+    height: 45px;
+
+    resize: none;
+
+    font-size: .9em;
+
+    border: none;
+
+    background-color: transparentize($darkBg, 0.6);
+    color: $lightBg;
 }
 
 .sidebar {
@@ -54,10 +108,6 @@
 
     width: 300px;
     height: 100vh;
-
-    border-right-width: 1px;
-    border-right-style: solid;
-    border-right-color: transparentize($darkBg, 0.2);
 
     background-color: transparentize($darkBg, 0.6);
 
@@ -76,9 +126,9 @@
             border-bottom-style: solid;
             border-bottom-color: $lightBg;
 
-            border-left-width: 1px;
-            border-left-style: solid;
-            border-left-color: transparentize($darkBg, 0.2);
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: transparentize($darkBg, 0.2);
 
             transition-property: all;
             transition-duration: .33s;
@@ -152,6 +202,36 @@ nav.navbar.navbar-default {
             padding: 0;
 
             color: $lightBg;
+        }
+    }
+
+    #account-btns {
+        .btn.btn-default {
+            float: none;
+
+            margin: 0;
+            margin-left: 5px;
+            padding: 0;
+
+            vertical-align: middle;
+
+            height: 32px;
+
+            background-color: transparent;
+            border: none;
+
+            color: $lightBg;
+
+            transition-property: all;
+            transition-duration: .33s;
+
+            & > i {
+                font-size: 1.5em;
+            }
+
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }
