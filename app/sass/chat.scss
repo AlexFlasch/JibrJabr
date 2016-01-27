@@ -137,6 +137,11 @@
                 border-bottom-color: $orange;
                 color: $orange;
             }
+
+            &:focus,
+            &:active {
+                color: $orange;
+            }
         }
     }
 }

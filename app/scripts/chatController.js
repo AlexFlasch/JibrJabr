@@ -3,12 +3,18 @@ var app = angular.module('jibrjabr');
 app.controller('chatCtrl', [function() {
     var chat = this;
 
+    chat.test = 'test';
+
     chat.createRoomContent = 'create-room-popover.html';
     chat.createRoomName = '';
 
     chat.rooms = [];
 
     var msg = '';
+}]);
+
+app.service('logoutUser', ['socket', function(socket) {
+
 }]);
 
 app.service('sendMsg', ['socket', function(socket) {

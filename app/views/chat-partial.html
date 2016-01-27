@@ -1,4 +1,14 @@
 <link rel="stylesheet" href="../styles/chat.scss.css">
+
+<script type="text/ng-template" id="create-room-popover.html">
+    <div class="input-group">
+        <input type="text" class="form-control" ng-model="chat.createRoomName">
+        <button class="btn btn-default">
+            <i class="mdi mdi-plus"></i>
+        </button>
+    </div>
+</script>
+
 <div ng-controller="chatCtrl as chat">
     <div class="sidebar container-fluid">
         <div class="row no-gutter">
@@ -10,7 +20,7 @@
                     </button>
                 </li>
                 <li class="col-md-6 col-xs-6">
-                    <button uib-popover-template="{{chat.createRoomContent}}" class="btn btn-default">
+                    <button uib-popover-template="chat.createRoomContent" class="btn btn-default" type="button">
                         <i class="mdi mdi-plus"></i>
                         Create Room
                     </button>
@@ -54,13 +64,14 @@
                 <div id="msg-box-container" class="container-fluid no-gutter">
                     <div class="row no-gutter">
                         <div class="col-md-10 col-xs-10">
-                            <textarea id="msg-box" ng-model="chat.msg"></textarea>
+                            <textarea id="msg-box" ng-model="chat.msg" placeholder="Start chatting here...">
+                            </textarea>
                         </div>
                         <div class="col-md-2 col-xs-2">
                             <div class="row no-gutter">
                                 <div class="col-md-4 col-xs-4">
                                     <button class="btn btn-default">
-                                        <i class="mdi mdi-plus"></i>
+                                        <i class="mdi mdi-paperclip"></i>
                                     </button>
                                 </div>
                                 <div class="col-md-8 col-xs-8">

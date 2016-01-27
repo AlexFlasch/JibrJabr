@@ -115,6 +115,10 @@
   color: #f2784b;
 }
 
+.sidebar .sidebar-btns .btn.btn-default:focus, .sidebar .sidebar-btns .btn.btn-default:active {
+  color: #f2784b;
+}
+
 nav.navbar.navbar-default {
   min-height: 35px !important;
   margin: 0;
